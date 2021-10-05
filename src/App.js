@@ -31,11 +31,11 @@ function App() {
       let isLucky= false
       isLucky= checknoisLucky(sum, number)
       if(isLucky){
-        showMessage("isLucky")
+        showMessage("Your Date of birth is Lucky")
         inputEl.current.classList.remove('isnotlucky')
         inputEl.current.classList.add('islucky')
       }else{
-        showMessage("is not Lucky")
+        showMessage("Your date of birth is not lucky")
         inputEl.current.classList.remove('islucky')
         inputEl.current.classList.add('isnotlucky')
       }
@@ -54,13 +54,13 @@ function App() {
       </header>
 
       <main className="con-main">
-        <div className="container">
+        <div className="container con-dateOfBirth">
           <div className="con-dob">
-            <label className="input-label" for="date-of-birth">Date Of Birth:</label>
+            <label className="input-label ip-dob" for="date-of-birth">Date Of Birth:</label>
             <input type="date" id="date-of-birth" className="input dob" onChange={(e) => setDob(e.target.value)}/>
           </div>
           <div className="con-dob">
-            <label className="input-label"  for="lucky-number" >Lucky Number:</label>
+            <label className="input-label ip-luckyNo"  for="lucky-number" >Lucky Number:</label>
             <input type="number" id="lucky-number" class="input lucky-no" placeholder="Enter a number" onChange={(e) => setNumber(e.target.value)}/>
           </div>
           <button className="calculate-number" onClick={clickHandler}>Check Number</button>
